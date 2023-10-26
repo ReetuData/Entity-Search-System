@@ -37,7 +37,7 @@ The initial part of the script retrieves data from a JSON file hosted at the giv
 
 - The "data_helpers.py" script provides essential functions for data retrieval and preprocessing.
   
-- The `retrieve_data` function fetches data from a given URL, checks for a HTTP request and JSON parsing errors, and returns the data as a JSON representation.
+- The `retrieve_data` function fetches data from a given URL, checks for an HTTP request and JSON parsing errors, and returns the data as a JSON representation.
   
 - The data preprocessing starts with the loading of a Parquet file using `read_dataframe`.
   
@@ -47,7 +47,7 @@ The initial part of the script retrieves data from a JSON file hosted at the giv
   
 - Finally, the preprocessed data is saved as a Parquet file with the name `preprocessed_df` and folder path using `save_df_as_parquet`.
 
-        **Input**: url (string): URL to perform an HTTP GET request on.
+        **Input**: URL (string): URL to perform an HTTP GET request on.
 
         **Output**: data_json (dict): JSON representation of the data.
 
@@ -248,7 +248,7 @@ allowing users to quickly identify documents that are most relevant to the query
 ### Docker 
 
         # Clone the repository
-        git clone https://github.com/ReetuData/Entity-Search-System
+        git clone [https://github.com/ReetuData/Entity-Search-System](https://github.com/ReetuData/Entity-Search-System.git)
 
         # Navigate to the application root folder
         cd Entity-Search-System-App
@@ -260,7 +260,7 @@ allowing users to quickly identify documents that are most relevant to the query
 ### Without Docker
 
         Run the app using: # Clone the repository
-        git clone https://github.com/ReetuData/Entity-Search-System
+        git clone [https://github.com/ReetuData/Entity-Search-System](https://github.com/ReetuData/Entity-Search-System.git)
 
         # Navigate to the application root folder
         cd Entity-Search-System-App
