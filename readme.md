@@ -121,7 +121,7 @@ In a recent project, five methods were used for text analysis: BM25, Word2Vec, T
    -   
    -  The formula involves both intersection and union operations and is used for comparing documents, tags, or any set-based data.
 
-  -  *Alpha (α)*: Alpha controls the emphasis on common elements between the two sets. When α is set to 1, the Tversky index focuses entirely on the intersection/shared elemnets of the sets. it makes it sensitive to the similarity of the sets based on their common elements.
+  -  *Alpha (α)*: Alpha controls the emphasis on common elements between the two sets. When α is set to 1, the Tversky index focuses entirely on the intersection/shared elements of the sets. it makes it sensitive to the similarity of the sets based on their common elements.
 
    - *Beta (β)*: Beta controls the emphasis on the differences between the two sets. When β is set to 1, the Tversky index concentrates entirely on the complement/unique of the intersection. This makes the method sensitive to the differences between the sets.
 
@@ -137,12 +137,12 @@ In a recent project, five methods were used for text analysis: BM25, Word2Vec, T
 
          When α > β, the Tversky index will favor common elements, sensitive to similarities.
          When α < β, the Tversky index will favor differences, sensitive to dissimilarities.
-         When α = β, the Tversky index becomes the Jaccard index, which is a balanced measure of similarity 
+         When α = β, the Tversky index becomes the Jaccard index, a balanced measure of similarity 
          based on the intersection and union of sets.
 
    **Pros**:
    - **Flexible Similarity Measurement**: The Tversky Index is highly flexible, allowing adjustments of alpha and beta parameters to customize the similarity measurement.
-   - **Set-Based Comparisons**: It is well-suited for comparing sets of items, making it applicable to a wide range of tasks.
+   - **Set-Based Comparisons**: It is well-suited for comparing sets of items, making it applicable to various tasks.
 
    **Cons**:
    - **Parameter Dependency**: The effectiveness of the Tversky Index depends on choosing appropriate values for the alpha and beta parameters.
@@ -182,7 +182,7 @@ The decision to employ these specific methods was influenced by several factors,
 Following the execution of text analysis employing these three methods, the final determination of the optimal approach was made based on the evaluation metrics which encompassed significant measures such as F1 Score, Accuracy, Recall, and Precision. This rigorous approach ensured the selection of the most suitable and effective method for the given context.
 
 ### F1 Score:
-F1 Score is a harmonic mean of precision and recall. It's a good metric for binary classification tasks, where there is an imbalance between the positive and negative classes. In this case, "BM25" had the highest F1 Score (0.006302) among the three methods.
+The F1 Score is a harmonic mean of precision and recall. It's a good metric for binary classification tasks, where there is an imbalance between the positive and negative classes. In this case, "BM25" had the highest F1 Score (0.006302) among the three methods.
 
 ### Accuracy:
 Accuracy is the ratio of correctly predicted instances to the total instances. It's a common metric for classification tasks. "BM25" also had the highest accuracy (0.003161).
@@ -197,11 +197,11 @@ Given that "BM25" performed the best in terms of F1 Score, Accuracy, and Recall,
 
 ## Search Algorithm using BM25 Search
 
-- The BM25 Search script is a tool that enhances text retrieval within a DataFrame using the BM25 (Best Matching 25) search algorithm.
+- The BM25 Search script is a tool that enhances text retrieval within a data frame using the BM25 (Best Matching 25) search algorithm.
 - BM25 is a ranking method designed to efficiently retrieve relevant documents based on keyword relevance to a query. 
 - To use this tool, you need to import the `rank_bm25` library and pass the preprocessed DataFrame into the search function named `apply_bm25_search`.
 
-- The `apply_bm25_search` function enables BM25 search on a specified text column of a DataFrame. 
+- The `apply_bm25_search` function enables BM25 to search on a specified text column of a data frame. 
 - The function tokenizes text, calculates BM25 scores, and ranks the DataFrame. 
 - -To use it, provide the name of the text column within the preprocessed DataFrame and set a search query for the BM25 algorithm. 
 - It returns a DataFrame enriched with BM25 scores, sorted by relevance. 
@@ -221,14 +221,14 @@ The `apply_bm25_search` function is a text retrieval method based on the BM25 al
 
 **BM25 Score Calculation**: BM25 scores are calculated for each document in the DataFrame based on its relevance to the query. The algorithm takes into account factors like term frequency and document length normalization.
 
-**Ranking Documents**: The DataFrame is sorted and ranked according to the calculated BM25 scores. This results in the most relevant documents appearing at the top.
+**Ranking Documents**: The data frame is sorted and ranked according to the calculated BM25 scores. This results in the most relevant documents appearing at the top.
 
 **Returns**: The function returns the sorted DataFrame,
 allowing users to quickly identify documents that are most relevant to the query.
 
 **Tool 2: Typo-Tolerant Search**
 
-- The `apply_typo_tolerant_search` function provides a mechanism for conducting typo-tolerant search. 
+- The `apply_typo_tolerant_search` function provides a mechanism for conducting the typo-tolerant search. 
 - It leverages the Levenshtein distance, also known as edit distance, to find approximate matches.
 -  Here's how it functions:
 
@@ -237,7 +237,7 @@ allowing users to quickly identify documents that are most relevant to the query
 - In this context, it calculates the edit distance between the search query and each document in the DataFrame column.
 
 **Filtering Based on Edit Distance**:
-- Rows in the DataFrame are filtered based on the maximum allowed edit distance. 
+- Rows in the data frame are filtered based on the maximum allowed edit distance. 
 - This threshold determines how similar the documents must be to the query.
 -  If the edit distance falls within the specified limit, the document is considered a match.
 
@@ -248,7 +248,7 @@ allowing users to quickly identify documents that are most relevant to the query
 ### Docker 
 
         # Clone the repository
-        git clone ---
+        git clone https://github.com/ReetuData/Entity-Search-System
 
         # Navigate to the application root folder
         cd Entity-Search-System-App
@@ -260,7 +260,7 @@ allowing users to quickly identify documents that are most relevant to the query
 ### Without Docker
 
         Run the app using: # Clone the repository
-        git clone 
+        git clone https://github.com/ReetuData/Entity-Search-System
 
         # Navigate to the application root folder
         cd Entity-Search-System-App
