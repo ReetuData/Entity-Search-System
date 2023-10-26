@@ -1,0 +1,25 @@
+version: '3.3'
+
+services:
+  # Streamlit Application
+  crux_entity_search_app:
+    container_name: crux_entity_search_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '9120:8501'
+    volumes:
+      - ./:/app/
+    restart: on-failure
+
+  # MongoDB
+  crux_entity_search_mongodb:
+    container_name: crux_entity_search_mongodb
+    image: mongo:4.4.20
+    ports:
+      - '9121:27017'
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=crux_user
+      - MONGO_INITDB_ROOT_PASSWORD=crux2023!
+    restart: on-failure
