@@ -117,7 +117,7 @@ In a recent project, five methods were used for text analysis: BM25, Word2Vec, T
    - TF-IDF is a suitable choice when simplicity and interpretability are important. Use it for basic document retrieval, keyword extraction, and text summarization. 
    - It works well for tasks involving small to medium-sized document collections.
 
-1. **Tversky Index**:
+4. **Tversky Index**:
    - **Description**: The Tversky index is a similarity measurement that compares the intersection and difference between two sets. 
    -  The Tversky index takes two sets as input and computes a similarity score based on a set of parameters (alpha and beta) that control the balance between emphasizing common elements or differences between sets.
    -   
@@ -156,7 +156,7 @@ In a recent project, five methods were used for text analysis: BM25, Word2Vec, T
    - It is versatile and can be customized with alpha and beta parameters to emphasize common elements or differences based on the task requirements. 
    - Effective for comparing sets of tags, documents, or items.
 
-1. **Monge-Eiken Method**:
+5. **Monge-Eiken Method**:
    - **Description**: The Monge-Eiken method is a technique used in text clustering and categorization. 
    -  This method operates by calculating the similarity between documents using a predefined set of features or attributes. 
    -  The similarity is calculated using a specific formula, often considering the frequency of shared features. 
