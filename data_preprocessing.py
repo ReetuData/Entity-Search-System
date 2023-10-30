@@ -2,7 +2,7 @@
 from data_helpers import read_dataframe, convert_df_to_lowercase, handle_spec_char_and_diacritics, save_df_as_parquet
 from data_loader import parent_path
 
-# 1. Load dataframe from data_loader saved as parquet file
+# 1. Load data frame from data_loader saved as parquet file
 comp_ticker_df = read_dataframe()
 
 # load DataFrame
@@ -23,5 +23,5 @@ print(preprocessed_df)
 # Specifying the folder path and file name
 file_name = "preprocessed_df.parquet"
 
-# Save the df as a Pickle file in the folder
+# Save the data frame as a parquet file in the folder
 save_df_as_parquet(preprocessed_df, parent_path, file_name)
